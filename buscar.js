@@ -1,4 +1,4 @@
-function buscarProductos() {
+function buscarProducto() {
   let query = document.getElementById("searchQuery").value;
 
   fetch("buscar.php?q=" + query)
