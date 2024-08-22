@@ -1,5 +1,5 @@
 <?php
-$host = 'localhos';
+$host = 'localhost';
 $dbname = 'iedec_db';
 $username = 'Coronel';
 $password = '';
