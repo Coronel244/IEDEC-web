@@ -66,3 +66,50 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+#logo {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+#social-links {
+    float: right;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+#search form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#search input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+#search input[type="submit"] {
+    padding: 5px 10px;
+    border: 1px solid #007BFF;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search input[type="submit"]:hover {
+    background-color: #0056b3;
+}
