@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda - IEDEC</title>
+    <link rel="stylesheet" href="Diseño.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo-link">
+                <img src="imagenes/Logo.jpg" alt="Logo IEDEC" id="logo">
+                <h1>IEDEC</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="Proyectos.html">Proyectos</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div id="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61560606806243&locale=es_LA" target="_blank">
+                    <img src="imagenes/facebook-icon.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/IEDEC_s.a" target="_blank">
+                    <img src="imagenes/instagram-icon.jpeg" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+            <form id="searchForm" action="resultados.html" method="GET">
+                <input type="text" id="searchQuery" name="q" placeholder="Buscar productos..." />
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section id="resultados">
+            <div class="container">
+                <h2>Resultados de la Búsqueda</h2>
+                <table id="resultadosTabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultadosBody">
+                        <!-- Los resultados se insertarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 IEDEC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Incluye el archivo JavaScript para cargar los resultados -->
+    <script src="buscar.js"></script>
+</body>
+</html>

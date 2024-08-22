@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Estilo para el encabezado fijo */
+header {
+    position: -webkit-sticky; /* Para navegadores basados en WebKit */
+    position: sticky; /* Para la mayoría de los navegadores modernos */
+    top: 0; /* Se fija en la parte superior */
+    z-index: 1000; /* Asegúrate de que el encabezado esté por encima de otros elementos */
+    background-color: #333; /* Color de fondo del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Agrega una sombra para mayor visibilidad */
+}
+
+
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+#intro, #servicios-destacados, #testimonios, #enlaces-rapidos {
+    padding: 20px 0;
+    margin: 20px 0;
+    background-color: #f4f4f4;
+}
+
+#servicios-destacados .servicio {
+    margin-bottom: 20px;
+}
+
+#testimonios blockquote {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #eee;
+    border-left: 5px solid #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+#logo {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+#social-links {
+    float: right;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
