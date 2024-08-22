@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+    <h1>Resultados de la Búsqueda</h1>
+    <div id="resultadosBusqueda"></div>
+
+    <script>
+        // Obtener la consulta de búsqueda desde los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+
+        // Función para buscar productos
+        function buscarProductos(query) {
+        fetch("buscar.php?q=" + query)
+            .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok " + response.statusText);
+            }
+            return response.json();
+            })
+            .then(data => {
+            let resultados = document.getElementById("resultadosBusqueda");
+            resultados.innerHTML = "";
+
+            if (data.length === 0) {
+                resultados.innerHTML = "<p>No se encontraron productos.</p>";
+            } else {
+                data.forEach(producto => {
+                resultados.innerHTML += `
+                    <div>
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.descripcion}</p>
+                    <p><strong>Precio:</strong> ${producto.precio}</p>
+                    <p><strong>Categoría:</strong> ${producto.categoria}</p>
+                    </div>
+                `;
+                });
+            }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+
+        // Ejecutar la búsqueda con la consulta obtenida de la URL
+        if (query) {
+        buscarProductos(query);
+        } else {
+        console.error("No se encontró ningún parámetro 'q' en la URL.");
+        }
+    </script>
+</body>
+</html>
